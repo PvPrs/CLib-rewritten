@@ -1,0 +1,87 @@
+• memset    -   complete
+• bzero     -   complete
+• memcpy	-	complete
+• memccpy   -   complete
+• memmove	-	complete
+• memchr    -   complete
+• memcmp    -   complete
+• strlen	-	complete
+• strdup	-	complete
+• strcpy	-	complete
+• strncpy	-	complete
+• strcat	-	complete
+• strncat	-	complete
+• strlcat	-	complete
+• strchr    -   complete
+• strrchr   -   complete
+• strstr    -   complete
+• strnstr   -   complete
+• strcmp    -   complete
+• strncmp   -   complete
+• atoi      -   complete
+• isalpha   -   complete
+• isdigit   -   complete
+• isalnum   -   complete
+• isascii   -   complete
+• isprint   -   complete
+• toupper   -   complete
+• tolower   -   complete
+
+PART 2:
+ ft_memalloc    -   complete
+ •
+ ft_memdel      -   complete
+ •
+ ft_strnew      -   completeß
+ •
+ ft_strdel      -   complete
+ •
+ ft_strclr      -   complete
+ •
+ ft_striter     -   complete
+ •
+ ft_striteri    -   complete
+ •
+ ft_strmap      -   complete
+ •
+ ft_strmapi     -   complete
+ •
+ ft_strequ      -   complete
+ •
+ ft_strnequ     -   complete
+ •
+ ft_strsub      -   complete
+ •
+ ft_strjoin     -   complete
+ •
+ ft_strtrim     -   complete
+ •
+ ft_strsplit    -   NORMINETTE: 35 LINES
+ •
+ ft_itoa       -    complete
+ •
+ ft_putchar     -   complete
+
+ •
+ ft_putstr      -   complete
+
+ •
+ ft_putendl     -   complete
+
+ •
+ ft_putnbr      -   complete
+
+ •
+ ft_putchar_fd  -   complete
+
+ •
+ ft_putstr_fd   -   complete
+
+ •
+ ft_putendl_fd  -   complete
+
+ •
+ ft_putnbr_fd   -   complete
+
+ BONUS:
+ 
