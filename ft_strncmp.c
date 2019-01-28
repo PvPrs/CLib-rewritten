@@ -14,17 +14,16 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t index;
+	size_t i;
 
-	index = 0;
-	while (s1[index] && index < n)
+	i = 0;
+	while (s1[i] && i < n)
 	{
-		if (s1[index] != s2[index])
+		if (s1[i] != s2[i])
 		{
-			return (s1[index] - s2[index]);
+			return ((const unsigned char)s1[i] - (const unsigned char)s2[i]);
 		}
-		printf("%zu", index);
-		index++;
+		i++;
 	}
-	return (0);
+	return ((const unsigned char)s1[i] - (const unsigned char)s2[i]);
 }

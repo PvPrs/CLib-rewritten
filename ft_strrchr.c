@@ -16,21 +16,13 @@ char		*ft_strrchr(const char *s, int c)
 {
 	char	refactored_c;
 	int		index;
-	char	*str;
 
-	str = (char*)s;
-	index = 0;
 	refactored_c = c;
-	while (s[index] + 1)
-	{
-		index++;
-	}
+	index = ft_strlen(s) + 1;
 	while (index > 0)
 	{
 		if (s[index] == refactored_c)
-		{
 			return ((char*)&s[index]);
-		}
 		index--;
 	}
 	return (NULL);

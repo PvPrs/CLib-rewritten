@@ -1,6 +1,14 @@
-//
-// Created by Dave Van bochove on 23/01/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_lstmap.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2019/01/24 14:15:12 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/01/24 14:15:13 by dvan-boc      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -12,7 +20,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	{
 		temp = lst->next;
 		lst = f(lst);
-		if(!lst)
+		if (!lst)
 		{
 			return (NULL);
 		}

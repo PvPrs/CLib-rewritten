@@ -24,18 +24,17 @@ int		ft_atoi(const char *str)
 	index = 0;
 	nbr = 0;
 	flag_state = POSITIVE;
-	while (str[index])
+	while (str[index] == ' ' || str[index] == '\n' ||
+			str[index] == '\t' || str[index] == '\v' ||
+			str[index] == '\r' || str[index] == '\f')
+		index++;
+	if (str[index] == '-' || str[index] == '+')
 	{
 		if (str[index] == '-')
 			flag_state = NEGATIVE;
-		if (str[index] == ' ' || str[index] == '\n' ||
-				str[index] == '\t' || str[index] == '\v' ||
-				str[index] == '\r' || str[index] == '\f' || str[index] == '+')
-			index++;
-		else
-			break ;
+		index++;
 	}
-	while (str[index])
+	while (str[index] && str[index] >= '0' && str[index] <= '9')
 	{
 		if (str[index] >= '0' && str[index] <= '9')
 			nbr = nbr * 10 + (str[index] - '0');

@@ -12,7 +12,7 @@
 
 int		ft_tolower(int c)
 {
-	char refactored_c;
+	unsigned char refactored_c;
 
 	refactored_c = c;
 	if (c >= 'A' && c <= 'Z')

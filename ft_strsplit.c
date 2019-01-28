@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int				ft_get_words(const char *s, char c)
+static int		ft_get_words(const char *s, char c)
 {
 	int i;
 	int flag;
@@ -67,7 +67,7 @@ char			**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 
-	str = malloc(ft_get_words(s, c) * sizeof(char*) + 1);
+	str = (char **)malloc(ft_get_words(s, c) * sizeof(char*) + 1);
 	ft_get_length(str, s, c);
 	return (str);
 }

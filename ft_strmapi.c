@@ -17,7 +17,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		index;
 
-	str = malloc(strlen(s) * sizeof(char) + 1);
+	str = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
 	while (str[index])
 	{
 		str[index] = f(index, s[index]);

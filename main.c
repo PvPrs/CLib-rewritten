@@ -3,6 +3,7 @@
 //
 
 #include "libft.h"
+#include "stdio.h"
 //
 ////static int		get_words(char const *s, char c)
 ////{
@@ -110,14 +111,10 @@
 
 int 	main(void)
 {
-	char **str;
-	str = ft_strsplit("**hey*hoe****is**het", '*');
-	int index;
-
-	index = 0;
-	while (str[index])
-	{
-		printf("%s \n", str[index]);
-		index++;
-	}
+    /**
+     * ft_isascii
+     */
+    //printf("%d\n", isascii('a'));
+	//printf("%d\n", ft_isascii('a'));
+    printf("%d", atoi("-2147483648"));
 }

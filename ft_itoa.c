@@ -1,6 +1,14 @@
-//
-// Created by Dave Van bochove on 21/01/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_itoa.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2019/01/24 14:13:55 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/01/24 14:13:58 by dvan-boc      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -17,13 +25,15 @@ static int		ft_getcount(int n)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char *str;
 
-	str = malloc(ft_getcount(n) * sizeof(char));
-	if(n >= 0)
+	str = (char *)malloc(ft_getcount(n) * sizeof(char));
+	if (n >= 0)
 	{
+		if (n == 0)
+			*--str = n + '0';
 		while (n != 0)
 		{
 			*--str = (n % 10) + '0';
@@ -40,5 +50,6 @@ char		*ft_itoa(int n)
 		}
 		*--str = '-';
 	}
+	str[ft_strlen(str)] = '\0';
 	return (str);
 }
