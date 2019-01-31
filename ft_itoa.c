@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		ft_getcount(int n)
 {
@@ -24,16 +25,12 @@ static int		ft_getcount(int n)
 		count++;
 		n = n / 10;
 	}
+	printf("%d", count);
 	return (count);
 }
 
-char			*ft_itoa(int n)
+static char		*ft_getcalc(char *str, int n)
 {
-	char *str;
-
-	str = (char *)malloc(ft_getcount(n) * sizeof(char) + 1);
-	if (!str)
-		return (NULL);
 	if (n >= 0)
 	{
 		if (n == 0)
@@ -54,6 +51,17 @@ char			*ft_itoa(int n)
 		}
 		*--str = '-';
 	}
+	return (str);
+}
+
+char			*ft_itoa(int n)
+{
+	char *str;
+
+	str = (char *)malloc(ft_getcount(n) * sizeof(char) + 1);
+	if (!str)
+		return (NULL);
+	str = ft_getcalc(str, n);
 	str[ft_strlen(str)] = '\0';
 	return (str);
 }

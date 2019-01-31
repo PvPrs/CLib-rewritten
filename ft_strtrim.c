@@ -43,7 +43,7 @@ char		*ft_strtrim(char const *s)
 	int rev_i;
 	if(!s)
 		return (NULL);
-	rev_i = ft_strlen(s) - 1;
+	rev_i = (int)ft_strlen(s) - 1;
 	i = 0;
 	return (ft_sendstr(s, i, rev_i));
 }

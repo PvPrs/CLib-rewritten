@@ -128,17 +128,5 @@ int 	main(void)
 //	        printf("%s\n", result[index]);
 //	        index++;
 //    }
-
-	t_list *l = ft_lstnew(strdup(" 1 2 3 "), 8);
-	t_list *ret;
-
-	l->next = ft_lstnew(strdup("ss"), 3);
-	l->next->next = ft_lstnew(strdup("-_-"), 4);
-	ret = ft_lstmap(l, lstmap_f);
-	if (!strcmp(ret->content, "OK !") && !strcmp(ret->next->content, "OK !") && !strcmp(ret->next->next->content, "OK !") && !strcmp(l->content, " 1 2 3 ") && !strcmp(l->next->content, "ss") && !strcmp(l->next->next->content, "-_-")) {
-		printf("succes");
-		return (1);
-	}
-	printf("failed");
-	return (0);
+	printf("%s", ft_itoa(124984));
 }

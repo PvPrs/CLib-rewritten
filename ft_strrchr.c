@@ -18,7 +18,7 @@ char		*ft_strrchr(const char *s, int c)
 	int		index;
 
 	refactored_c = c;
-	index = ft_strlen(s);
+	index = (int)ft_strlen(s);
 	while (index >= 0)
 	{
 		if (s[index] == refactored_c)
