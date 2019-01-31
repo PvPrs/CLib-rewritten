@@ -17,6 +17,8 @@ static int		ft_getcount(int n)
 	int count;
 
 	count = 0;
+	if (n < 0)
+		count = 1;
 	while (n != 0)
 	{
 		count++;
@@ -29,7 +31,9 @@ char			*ft_itoa(int n)
 {
 	char *str;
 
-	str = (char *)malloc(ft_getcount(n) * sizeof(char));
+	str = (char *)malloc(ft_getcount(n) * sizeof(char) + 1);
+	if (!str)
+		return (NULL);
 	if (n >= 0)
 	{
 		if (n == 0)

@@ -50,7 +50,7 @@ static char		**ft_get_length(char **str, char const *s, char c)
 		{
 			start = index;
 			len = 0;
-			while (s[index] != c)
+			while (s[index] != c && s[index])
 			{
 				len++;
 				index++;
@@ -67,7 +67,11 @@ char			**ft_strsplit(char const *s, char c)
 {
 	char	**str;
 
+	if (!s || !c)
+	    return (NULL);
 	str = (char **)malloc(ft_get_words(s, c) * sizeof(char*) + 1);
+	if (!str)
+		return (NULL);
 	ft_get_length(str, s, c);
 	return (str);
 }

@@ -10,14 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
-{
-	char refactored_c;
+int		ft_toupper(int c) {
 
-	refactored_c = c;
-	if (c >= 'a' && c <= 'z')
-	{
-		refactored_c = (c - 'a' + 'A');
+	if (c >= 'a' && c <= 'z') {
+		c = (c - 'a' + 'A');
 	}
-	return (refactored_c);
+	return (c);
 }

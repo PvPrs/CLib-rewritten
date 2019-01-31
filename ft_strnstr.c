@@ -21,7 +21,7 @@ char		*ft_strnstr(char *haystack, char *needle, size_t len)
 	index_2 = 0;
 	if (needle[0] == '\0')
 	{
-		return ((char*)haystack);
+		return (haystack);
 	}
 	while (index_2 < len && haystack)
 	{

@@ -20,11 +20,11 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	index = start;
 	index_2 = 0;
+	if (!s)
+		return (NULL);
 	str = (char *)malloc((sizeof(char) * len) + 1);
 	if (!str)
-	{
 		return (NULL);
-	}
 	while (s[index] && len != 0)
 	{
 		str[index_2] = s[index];

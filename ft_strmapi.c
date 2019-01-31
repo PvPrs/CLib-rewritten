@@ -17,10 +17,15 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	int		index;
 
+	index = 0;
+	if (!s)
+		return (NULL);
 	str = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
-	while (str[index])
+	if (!str)
+		return (NULL);
+	while (s[index])
 	{
-		str[index] = f(index, s[index]);
+		str[index] = f((unsigned int)index, s[index]);
 		index++;
 	}
 	str[index] = '\0';

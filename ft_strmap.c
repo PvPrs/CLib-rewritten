@@ -18,8 +18,12 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	int		index;
 
 	index = 0;
+	if(!s)
+		return (NULL);
 	str = (char *)malloc(ft_strlen(s) * sizeof(char) + 1);
-	while (str[index])
+	if (!str)
+		return (NULL);
+	while (s[index])
 	{
 		str[index] = f(s[index]);
 		index++;

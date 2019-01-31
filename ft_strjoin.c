@@ -11,19 +11,20 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	int		index;
 
+	if (!s1 || !s2)
+		return (NULL);
 	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) * sizeof(char) + 1);
 	if (!str)
 	{
 		return (NULL);
 	}
-	str = ft_strcat((char*)s1, (char*)s2);
-	index = ft_strlen(str);
-	str[index] = '\0';
+	ft_strcpy(str, s1);
+	ft_strcat(str, s2);
 	return (str);
 }

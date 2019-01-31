@@ -116,5 +116,29 @@ int 	main(void)
      */
     //printf("%d\n", isascii('a'));
 	//printf("%d\n", ft_isascii('a'));
-    printf("%d", atoi("-2147483648"));
+	/**
+	 * toupper
+	 */
+//	char s[] = "      split       this for   me  !       ";
+//	int index;
+//	index = 0;
+//	char **result = ft_strsplit(s, '|');
+//	while (result[index])
+//    {
+//	        printf("%s\n", result[index]);
+//	        index++;
+//    }
+
+	t_list *l = ft_lstnew(strdup(" 1 2 3 "), 8);
+	t_list *ret;
+
+	l->next = ft_lstnew(strdup("ss"), 3);
+	l->next->next = ft_lstnew(strdup("-_-"), 4);
+	ret = ft_lstmap(l, lstmap_f);
+	if (!strcmp(ret->content, "OK !") && !strcmp(ret->next->content, "OK !") && !strcmp(ret->next->next->content, "OK !") && !strcmp(l->content, " 1 2 3 ") && !strcmp(l->next->content, "ss") && !strcmp(l->next->next->content, "-_-")) {
+		printf("succes");
+		return (1);
+	}
+	printf("failed");
+	return (0);
 }
