@@ -11,26 +11,25 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int		ft_get_words(const char *s, char c)
 {
 	int i;
-	int flag;
 	int words;
 
 	i = 0;
-	flag = 0;
-	words = 1;
-	while (s[i])
+	words = 0;
+	while (s[i] != '\0')
 	{
-		if (flag == 0 && s[i] != c)
-			flag = 1;
-		if (flag == 1 && s[i] == c)
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i])
 		{
-			flag = 0;
+			while (s[i] != c && s != '\0')
+				i++;
 			words++;
 		}
-		i++;
 	}
 	return (words);
 }
@@ -55,11 +54,11 @@ static char		**ft_get_length(char **str, char const *s, char c)
 				len++;
 				index++;
 			}
-			str[word_index++] = ft_strsub(s, start, len);
+			str[word_index] = ft_strsub(s, start, len);
+			word_index++;
 		}
 		index++;
 	}
-	str[word_index] = NULL;
 	return (str);
 }
 
@@ -73,5 +72,6 @@ char			**ft_strsplit(char const *s, char c)
 	if (!str)
 		return (NULL);
 	ft_get_length(str, s, c);
+	str[ft_get_words(s, c)] = NULL;
 	return (str);
 }

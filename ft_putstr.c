@@ -17,6 +17,8 @@ void		ft_putstr(char const *s)
 	int index;
 
 	index = 0;
+	if(s == NULL)
+		return ;
 	while (s[index])
 	{
 		write(1, &s[index], 1);

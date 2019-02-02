@@ -109,24 +109,14 @@
 //	return (len);
 //}
 
-int 	main(void)
-{
-    /**
-     * ft_isascii
-     */
-    //printf("%d\n", isascii('a'));
-	//printf("%d\n", ft_isascii('a'));
-	/**
-	 * toupper
-	 */
-//	char s[] = "      split       this for   me  !       ";
-//	int index;
-//	index = 0;
-//	char **result = ft_strsplit(s, '|');
-//	while (result[index])
-//    {
-//	        printf("%s\n", result[index]);
-//	        index++;
-//    }
-	printf("%s", ft_itoa(124984));
+int 	main(void) {
+	char **test = ft_strsplit("coucou", '*');
+	int index;
+
+	index = 0;
+	while (test[index])
+	{
+		printf("%s", test[index]);
+		index++;
+	}
 }
