@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-char		*ft_strstr(char *haystack, char *needle)
+char		*ft_strstr(const char *haystack, const char *needle)
 {
-	char *string;
-	char *substring;
+	const char *string;
+	const char *substring;
 
 	substring = needle;
 	if (*substring == 0)
-		return (haystack);
+		return ((char *)haystack);
 	while (*haystack != 0)
 	{
 		if (*haystack != *substring)
@@ -31,7 +31,7 @@ char		*ft_strstr(char *haystack, char *needle)
 		while (1)
 		{
 			if (*substring == 0)
-				return (haystack);
+				return ((char *)haystack);
 			if (*string++ != *substring++)
 				break ;
 		}

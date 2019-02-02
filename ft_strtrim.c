@@ -41,7 +41,8 @@ char		*ft_strtrim(char const *s)
 {
 	int i;
 	int rev_i;
-	if(!s)
+
+	if (!s)
 		return (NULL);
 	rev_i = (int)ft_strlen(s) - 1;
 	i = 0;

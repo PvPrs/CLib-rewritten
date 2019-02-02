@@ -110,13 +110,7 @@
 //}
 
 int 	main(void) {
-	char **test = ft_strsplit("coucou", '*');
-	int index;
+	char *i1 = ft_itoa(-2147483648);
+	printf("succes: %s\n", i1);
 
-	index = 0;
-	while (test[index])
-	{
-		printf("%s", test[index]);
-		index++;
-	}
 }

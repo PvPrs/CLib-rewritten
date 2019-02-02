@@ -11,57 +11,46 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		ft_getcount(int n)
 {
 	int count;
 
 	count = 0;
-	if (n < 0)
+	if (n <= 0)
 		count = 1;
 	while (n != 0)
 	{
 		count++;
 		n = n / 10;
 	}
-	printf("%d", count);
 	return (count);
-}
-
-static char		*ft_getcalc(char *str, int n)
-{
-	if (n >= 0)
-	{
-		if (n == 0)
-			*--str = n + '0';
-		while (n != 0)
-		{
-			*--str = (n % 10) + '0';
-			n /= 10;
-		}
-	}
-	else
-	{
-		n = n * -1;
-		while (n != 0)
-		{
-			*--str = (n % 10) + '0';
-			n /= 10;
-		}
-		*--str = '-';
-	}
-	return (str);
 }
 
 char			*ft_itoa(int n)
 {
-	char *str;
+	char			*str;
+	int				index;
+	unsigned int	nbr;
 
-	str = (char *)malloc(ft_getcount(n) * sizeof(char) + 1);
+	nbr = n;
+	index = ft_getcount(nbr);
+	str = (char *)malloc(ft_getcount(nbr) * sizeof(char) + 1);
 	if (!str)
 		return (NULL);
-	str = ft_getcalc(str, n);
-	str[ft_strlen(str)] = '\0';
+	if (n < 0)
+	{
+		nbr = n * -1;
+		*str = '-';
+	}
+	str[index--] = '\0';
+	if (nbr == 0)
+		str[index] = 0 + '0';
+	while (nbr != 0)
+	{
+		str[index] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+		index--;
+	}
 	return (str);
 }
