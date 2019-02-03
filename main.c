@@ -110,7 +110,6 @@
 //}
 
 int 	main(void) {
-	char *i1 = ft_itoa(-2147483648);
-	printf("succes: %s\n", i1);
+	printf("%d", ft_isprime(101));
 
 }
