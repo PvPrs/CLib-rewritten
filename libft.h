@@ -66,11 +66,11 @@ char				**ft_strsplit(char const *s, char c);
 void				ft_putstr(char const *s);
 void				ft_putchar(char c);
 void				ft_putendl(char const *s);
-void				ft_putnbr(int nb);
+void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
-void				ft_putnbr_fd(int nb, int fd);
+void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
@@ -87,5 +87,7 @@ int					ft_isalpha(int c);
 char				*ft_strtolower(char *str);
 char				*ft_strtoupper(char *str);
 int					ft_isprime(int nbr);
+int					ft_sqrt(int nbr);
+char				*ft_revstr(char *str);
 
 #endif

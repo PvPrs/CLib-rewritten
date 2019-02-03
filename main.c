@@ -110,6 +110,7 @@
 //}
 
 int 	main(void) {
-	printf("%d", ft_isprime(101));
+	char str[] = "hallo!";
+	printf("%s", ft_revstr(str));
 
 }

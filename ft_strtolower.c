@@ -17,7 +17,8 @@ char		*ft_strtolower(char *str)
 	index = 0;
 	while (str[index])
 	{
-		if (str[index] >= 'A' && str[index] <= 'Z') {
+		if (str[index] >= 'A' && str[index] <= 'Z')
+		{
 			str[index] = (str[index] - 'A' + 'a');
 		}
 		index++;

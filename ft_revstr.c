@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_toupper.c                                       :+:    :+:            */
+/*   ft_revstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/15 19:50:02 by dvan-boc      #+#    #+#                 */
-/*   Updated: 2019/01/15 19:50:08 by dvan-boc      ########   odam.nl         */
+/*   Created: 2019/02/03 14:00:52 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/02/03 14:00:53 by dvan-boc      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strtoupper(char *str)
-{
-	int index;
+#include "libft.h"
 
-	index = 0;
-	while (str[index])
+char		*ft_revstr(char *str)
+{
+	char	*rev_str;
+	int		index;
+	int		index_rev;
+
+	index = ft_strlen(str) - 1;
+	index_rev = 0;
+	rev_str = ft_strdup(str);
+	while (rev_str[index_rev])
 	{
-		if (str[index] >= 'a' && str[index] <= 'z')
-		{
-			str[index] = (str[index] - 'a' + 'A');
-		}
-		index++;
+		str[index] = rev_str[index_rev];
+		index--;
+		index_rev++;
 	}
+	free(rev_str);
 	return (str);
 }

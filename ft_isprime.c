@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * Checks if the entered value is a prime number.
- * @param nbr Number to be checked if it represents a @Prime number
- * @return 1 = TRUE, 0 = FALSE
- */
 int		ft_isprime(int nbr)
 {
 	int counter;
