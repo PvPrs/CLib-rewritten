@@ -33,24 +33,24 @@ SRC = string/ft_revstr.c \
 	string/ft_strdup.c \
 	string/ft_strjoin.c \
 	string/ft_strcmp.c \
-	memory/ft_memset.c \
-	memory/ft_memccpy.c \
-	memory/ft_memalloc.c \
+	mem/ft_memset.c \
+	mem/ft_memccpy.c \
+	mem/ft_memalloc.c \
 	utils/ft_itoa.c \
 	utils/ft_isdigit.c \
 	utils/ft_isprime.c \
 	string/ft_strlen.c \
 	string/ft_bzero.c \
 	string/ft_strdel.c \
-	memory/ft_memmove.c \
-	memory/ft_memdel.c \
+	mem/ft_memmove.c \
+	mem/ft_memdel.c \
 	string/ft_strncmp.c \
 	utils/ft_int_to_binary.c \
 	print/ft_putnbr.c \
-	memory/ft_memcpy.c \
-	memory/ft_memchr.c \
+	mem/ft_memcpy.c \
+	mem/ft_memchr.c \
 	utils/ft_isalnum.c \
-	memory/ft_memcmp.c \
+	mem/ft_memcmp.c \
 	utils/ft_tolower.c \
 	string/ft_strstr.c \
 	string/ft_strclr.c \
