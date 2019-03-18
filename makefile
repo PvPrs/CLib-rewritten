@@ -15,72 +15,72 @@ NAME = libft.a
 HEADER = includes/ \
 		 get_next_line/get_next_line.h \
 
-SRC = ft_striter.c \
-	ft_memset.c \
-	ft_strequ.c \
-	ft_isalnum.c \
-	ft_strcat.c \
-	ft_strdup.c \
-	ft_strcpy.c \
-	print/ft_putnbr.c \
+SRC = string/ft_revstr.c \
+	list/ft_lstiter.c \
+	list/ft_lstdel.c \
+	string/ft_strsub.c \
+	list/ft_lstdelone.c \
+	string/ft_strtolower.c \
+	list/ft_lstnew.c \
+	string/ft_strtoupper.c \
+	string/ft_striter.c \
 	ft_putnbr_fd.c \
-	ft_atoi.c \
-	ft_strstr.c \
-	print/ft_putendl.c \
-	ft_lstadd.c \
-	ft_strnstr.c \
-	ft_isdigit.c \
-	ft_tolower.c \
-	ft_strncmp.c \
-	ft_isprint.c \
-	ft_strcmp.c \
-	ft_isalpha.c \
-	ft_strnequ.c \
-	ft_strdel.c \
-	print/ft_putchar.c \
-	ft_memdel.c \
-	ft_strlcat.c \
-	ft_strchr.c \
-	ft_memchr.c \
-	ft_itoa.c \
-	ft_strsub.c \
-	ft_strmap.c \
-	ft_isascii.c \
-	ft_strnew.c \
-	ft_bzero.c \
-	ft_lstmap.c \
 	ft_putchar_fd.c \
-	ft_strncpy.c \
-	ft_strncat.c \
-	ft_memmove.c \
-	ft_strrchr.c \
-	ft_strlen.c \
-	ft_strjoin.c \
-	ft_memcmp.c \
-	ft_memcpy.c \
-	ft_putstr_fd.c \
-	ft_striteri.c \
-	ft_memalloc.c \
-	ft_strclr.c \
-	print/ft_putstr.c \
-	ft_lstiter.c \
-	ft_lstnew.c \
-	ft_strtrim.c \
-	ft_lstdel.c \
-	ft_strsplit.c \
-	ft_strmapi.c \
-	ft_memccpy.c \
-	ft_toupper.c \
-	ft_lstdelone.c \
 	ft_putendl_fd.c \
-	ft_strtolower.c \
-	ft_strtoupper.c \
-	ft_isprime.c \
-	ft_sqrt.c \
-	ft_revstr.c \
-	ft_bit_to_max_int_size.c \
-	ft_int_to_binary.c \
+	string/ft_strcpy.c \
+	string/ft_strcat.c \
+	string/ft_strmapi.c \
+	string/ft_strdup.c \
+	string/ft_strjoin.c \
+	string/ft_strcmp.c \
+	memory/ft_memset.c \
+	memory/ft_memccpy.c \
+	memory/ft_memalloc.c \
+	utils/ft_itoa.c \
+	utils/ft_isdigit.c \
+	utils/ft_isprime.c \
+	string/ft_strlen.c \
+	string/ft_bzero.c \
+	string/ft_strdel.c \
+	memory/ft_memmove.c \
+	memory/ft_memdel.c \
+	string/ft_strncmp.c \
+	utils/ft_int_to_binary.c \
+	print/ft_putnbr.c \
+	memory/ft_memcpy.c \
+	memory/ft_memchr.c \
+	utils/ft_isalnum.c \
+	memory/ft_memcmp.c \
+	utils/ft_tolower.c \
+	string/ft_strstr.c \
+	string/ft_strclr.c \
+	string/ft_strnew.c \
+	list/ft_lstadd.c \
+	print/ft_putstr.c \
+	string/ft_strequ.c \
+	string/ft_strmap.c \
+	string/ft_strlcat.c \
+	print/ft_putchar.c \
+	string/ft_strsplit.c \
+	string/ft_striteri.c \
+	utils/ft_atoi.c \
+	utils/ft_isascii.c \
+	utils/ft_isprint.c \
+	string/ft_strchr.c \
+	string/ft_strrchr.c \
+	utils/ft_toupper.c \
+	utils/ft_isalpha.c \
+	ft_putstr_fd.c \
+	string/ft_strncat.c \
+	string/ft_strncpy.c \
+	print/ft_putendl.c \
+	string/ft_strnequ.c \
 	get_next_line/get_next_line.c \
+	string/ft_strnstr.c \
+	list/ft_lstmap.c \
+	utils/ft_bit_to_max_int_size.c \
+	utils/ft_sqrt.c \
+	string/ft_strtrim.c \
 
 OBJ = ft_striter.o \
 	ft_memset.o \
