@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putendl.c                                       :+:    :+:            */
+/*   ft_putnbr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/24 14:12:34 by dvan-boc      #+#    #+#                 */
-/*   Updated: 2019/01/24 14:12:36 by dvan-boc      ########   odam.nl         */
+/*   Created: 2019/01/24 14:13:39 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/01/24 14:13:40 by dvan-boc      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-void		ft_putendl(char const *s)
+void	ft_putnbr(int n)
 {
-	if (s == NULL)
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
 		return ;
-	ft_putstr(s);
-	write(1, "\n", 1);
+	}
+	if (n < 0)
+	{
+		ft_putchar('-');
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }

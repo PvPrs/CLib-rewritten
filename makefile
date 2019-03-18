@@ -12,7 +12,8 @@
 
 NAME = libft.a
 
-HEADER = includes/
+HEADER = includes/ \
+		 get_next_line/get_next_line.h \
 
 SRC = ft_striter.c \
 	ft_memset.c \
@@ -21,11 +22,11 @@ SRC = ft_striter.c \
 	ft_strcat.c \
 	ft_strdup.c \
 	ft_strcpy.c \
-	ft_putnbr.c \
+	print/ft_putnbr.c \
 	ft_putnbr_fd.c \
 	ft_atoi.c \
 	ft_strstr.c \
-	ft_putendl.c \
+	print/ft_putendl.c \
 	ft_lstadd.c \
 	ft_strnstr.c \
 	ft_isdigit.c \
@@ -36,7 +37,7 @@ SRC = ft_striter.c \
 	ft_isalpha.c \
 	ft_strnequ.c \
 	ft_strdel.c \
-	ft_putchar.c \
+	print/ft_putchar.c \
 	ft_memdel.c \
 	ft_strlcat.c \
 	ft_strchr.c \
@@ -61,7 +62,7 @@ SRC = ft_striter.c \
 	ft_striteri.c \
 	ft_memalloc.c \
 	ft_strclr.c \
-	ft_putstr.c \
+	print/ft_putstr.c \
 	ft_lstiter.c \
 	ft_lstnew.c \
 	ft_strtrim.c \
@@ -77,6 +78,9 @@ SRC = ft_striter.c \
 	ft_isprime.c \
 	ft_sqrt.c \
 	ft_revstr.c \
+	ft_bit_to_max_int_size.c \
+	ft_int_to_binary.c \
+	get_next_line/get_next_line.c \
 
 OBJ = ft_striter.o \
 	ft_memset.o \
@@ -141,6 +145,9 @@ OBJ = ft_striter.o \
 	ft_isprime.o \
 	ft_sqrt.o \
 	ft_revstr.o \
+	ft_bit_to_max_int_size.o \
+	ft_int_to_binary.o \
+	get_next_line.o \
 
 all: $(NAME)
 
