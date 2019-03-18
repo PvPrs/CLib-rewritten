@@ -13,7 +13,7 @@
 NAME = libft.a
 
 HEADER = includes/ \
-		 get_next_line/get_next_line.h \
+		 io/get_next_line.h \
 
 SRC = string/ft_revstr.c \
 	list/ft_lstiter.c \
@@ -75,7 +75,7 @@ SRC = string/ft_revstr.c \
 	string/ft_strncpy.c \
 	print/ft_putendl.c \
 	string/ft_strnequ.c \
-	get_next_line/get_next_line.c \
+	io/get_next_line.c \
 	string/ft_strnstr.c \
 	list/ft_lstmap.c \
 	utils/ft_bit_to_max_int_size.c \
