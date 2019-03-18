@@ -28,7 +28,7 @@ int		ft_bit_to_max_int(int max_bit_size)
 	{
 		ft_putstr("bit: ");
 		ft_putnbr(bit_size);
-		ft_putstr(" amount: ");
+		ft_putstr(" Maximum int value: ");
 		ft_putnbr(nbr);
 		ft_putstr("\n");
 		nbr *= 2;

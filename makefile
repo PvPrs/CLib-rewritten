@@ -145,7 +145,7 @@ OBJ = ft_striter.o \
 	ft_isprime.o \
 	ft_sqrt.o \
 	ft_revstr.o \
-	ft_bit_to_max_int_size.o \
+	ft_bit_to_max_int.o \
 	ft_int_to_binary.o \
 	get_next_line.o \
 
