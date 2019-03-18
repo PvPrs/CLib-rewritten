@@ -1,42 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_int_to_binary.c                                 :+:    :+:            */
+/*   ft_bit_to_max_int.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/03/18 03:44:02 by dvan-boc      #+#    #+#                 */
-/*   Updated: 2019/03/18 03:44:56 by dvan-boc      ########   odam.nl         */
+/*   Created: 2019/03/18 03:46:52 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/03/18 03:47:07 by dvan-boc      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void		ft_int_to_binary(int amount)
-{
-	int bits;
+/*
+** @param max_bit_size Sets the loop_limit to max_bit_size
+** @return calculation of the maximum integer possible in a specific bit.
+*/
 
-	bits = 1;
-	if (amount < 0)
+int		ft_bit_to_max_int(int max_bit_size)
+{
+	int nbr;
+	int bit_size;
+
+	nbr = 1;
+	bit_size = 1;
+	while (bit_size <= max_bit_size)
 	{
-		ft_putnbr(1);
-		amount *= -1;
+		ft_putstr("bit: ");
+		ft_putnbr(bit_size);
+		ft_putstr(" amount: ");
+		ft_putnbr(nbr);
+		ft_putstr("\n");
+		nbr *= 2;
+		bit_size++;
 	}
-	else
-		ft_putnbr(0);
-	while (bits < 32)
-	{
-		if (bits % 8 == 0)
-			ft_putstr(" ");
-		if (amount == 0)
-		{
-			ft_putnbr(0);
-			bits++;
-			continue;
-		}
-		ft_putnbr(amount % 2);
-		amount = amount / 2;
-		bits++;
-	}
-	ft_putstr("\n");
+	return (0);
 }

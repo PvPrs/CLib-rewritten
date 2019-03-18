@@ -78,7 +78,7 @@ SRC = string/ft_revstr.c \
 	io/get_next_line.c \
 	string/ft_strnstr.c \
 	list/ft_lstmap.c \
-	utils/ft_bit_to_max_int_size.c \
+	utils/ft_bit_to_max_int.c \
 	utils/ft_sqrt.c \
 	string/ft_strtrim.c \
 
