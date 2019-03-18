@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putstr_fd.c                                     :+:    :+:            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dvan-boc <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/01/24 12:29:01 by dvan-boc      #+#    #+#                 */
-/*   Updated: 2019/01/24 12:29:21 by dvan-boc      ########   odam.nl         */
+/*   Created: 2019/01/24 14:13:15 by dvan-boc      #+#    #+#                 */
+/*   Updated: 2019/01/24 14:13:16 by dvan-boc      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 
-void		ft_putstr_fd(char const *s, int fd)
+void		ft_putendl_fd(char const *s, int fd)
 {
-	int index;
-
-	index = 0;
 	if (s == NULL)
 		return ;
-	while (s[index])
-	{
-		write(fd, &s[index], 1);
-		index++;
-	}
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

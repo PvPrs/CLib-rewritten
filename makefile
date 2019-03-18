@@ -24,9 +24,9 @@ SRC = string/ft_revstr.c \
 	list/ft_lstnew.c \
 	string/ft_strtoupper.c \
 	string/ft_striter.c \
-	ft_putnbr_fd.c \
-	ft_putchar_fd.c \
-	ft_putendl_fd.c \
+	fd/ft_putnbr_fd.c \
+	fd/ft_putchar_fd.c \
+	fd/ft_putendl_fd.c \
 	string/ft_strcpy.c \
 	string/ft_strcat.c \
 	string/ft_strmapi.c \
@@ -70,7 +70,7 @@ SRC = string/ft_revstr.c \
 	string/ft_strrchr.c \
 	utils/ft_toupper.c \
 	utils/ft_isalpha.c \
-	ft_putstr_fd.c \
+	fd/ft_putstr_fd.c \
 	string/ft_strncat.c \
 	string/ft_strncpy.c \
 	print/ft_putendl.c \
