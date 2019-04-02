@@ -12,31 +12,39 @@
 
 #include "../includes/libft.h"
 
-void		ft_int_to_binary(int amount)
+char		*ft_int_to_binary(int amount)
 {
+	char *res;
 	int bits;
+	int index;
 
 	bits = 1;
+	index = 1;
+	res = malloc(35 * sizeof(char));
 	if (amount < 0)
 	{
-		ft_putnbr(1);
+		res[0] = '1';
 		amount *= -1;
 	}
 	else
-		ft_putnbr(0);
+		res[0] = '0';
 	while (bits < 32)
 	{
 		if (bits % 8 == 0)
-			ft_putstr(" ");
+			res[index] = ' ';
+			index++;
 		if (amount == 0)
 		{
-			ft_putnbr(0);
+			res[index] = '0';
+			index++;
 			bits++;
 			continue;
 		}
-		ft_putnbr(amount % 2);
+		res[index] = ft_itoa(amount % 2)[0];
+		index++;
 		amount = amount / 2;
 		bits++;
 	}
-	ft_putstr("\n");
+	res[index] = '\0';
+	return (res);
 }

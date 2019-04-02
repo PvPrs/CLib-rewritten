@@ -91,5 +91,5 @@ int					ft_sqrt(int nbr);
 char				*ft_revstr(char *str);
 int					get_next_line(const int fd, char **line);
 int					ft_bit_to_max_int(int max_bit_size);
-void				ft_int_to_binary(int amount);
+char				*ft_int_to_binary(int amount);
 #endif

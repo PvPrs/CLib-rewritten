@@ -24,15 +24,10 @@ int		ft_bit_to_max_int(int max_bit_size)
 
 	nbr = 1;
 	bit_size = 1;
-	while (bit_size <= max_bit_size)
+	while (bit_size < max_bit_size)
 	{
-		ft_putstr("bit: ");
-		ft_putnbr(bit_size);
-		ft_putstr(" Maximum int value: ");
-		ft_putnbr(nbr);
-		ft_putstr("\n");
 		nbr *= 2;
 		bit_size++;
 	}
-	return (0);
+	return (nbr);
 }
