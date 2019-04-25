@@ -161,5 +161,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 	rm -f *~
+	find . -name \*.gch -type f -delete
 
 re: fclean all
